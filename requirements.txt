@@ -1,4 +1,5 @@
 Fabric
+Flask
 # Flask-SQLAlchemy
 # Flask-WTF
 # WTForms
