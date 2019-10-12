@@ -7,3 +7,5 @@ coverage
 # paramiko
 # pycrypto
 google-cloud-automl
+opencv-python
+
