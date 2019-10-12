@@ -1,7 +1,7 @@
 Fabric
-Flask-SQLAlchemy
-Flask-WTF
-WTForms
+# Flask-SQLAlchemy
+# Flask-WTF
+# WTForms
 coverage
 # ecdsa
 # paramiko
