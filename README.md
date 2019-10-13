@@ -2,10 +2,11 @@
 
 This web app is built on Python's Flask framework with Bootstrap, using a [Flask Boilerplate](https://github.com/realpython/flask-boilerplate).  It uses Google Cloud Platform's AutoML Vision API to train and deploy a custom model on laundry symbols.
 
-To use:
+To use (use `pip` on Windows/Linux, and `pip3` for macOS):
 ```bash
 $ git clone https://github.com/Liew211/laundrowat.git
 $ cd laundrowat
+$ pip install virtualenv
 $ virtualenv env
 $ source venv/bin/activate
 ```

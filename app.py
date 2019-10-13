@@ -7,6 +7,7 @@ from flask import Flask, render_template, request
 import logging
 from logging import Formatter, FileHandler
 import os
+from camera import video
 
 #----------------------------------------------------------------------------#
 # App Config.
@@ -18,6 +19,7 @@ app.config.from_object('config')
 
 @app.route('/')
 def home():
+    video()
     return render_template('pages/placeholder.home.html')
 
 
