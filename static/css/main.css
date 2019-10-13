@@ -3,13 +3,19 @@
  * @file
  * Main stylesheet file.
  */
-
-
 /*****************************************************************************
  * Main elements
  ****************************************************************************/
 html {
-  overflow-y: scroll;
+  overflow-y: auto;
+}
+h1{
+  color:darkblue;
+  font-family: 'Segoe UI';
+}
+h2{
+  color:red;
+  font-family: "cursive";
 }
 a {
   cursor: pointer;
