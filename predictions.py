@@ -14,11 +14,12 @@ def get_prediction(content, project_id, model_id):
   request = prediction_client.predict(name, payload, params)
   return request  # waits till request is returned
 
-file_path = 'simplecv.png'
+file_path = ['sample1-1.jpg', 'sample1-2.png','sample1-3.png', 'sample1-4.png', 'sample1-5.png']
 project_id = '832778849297'
-model_id = 'ICN7594304822816276480'
+model_id = 'ICN2474837946402865152'
 
-with open(file_path, 'rb') as ff:
-    content = ff.read()
+for file in file_path:
+  with open(file, 'rb') as ff:
+      content = ff.read()
 
-print(get_prediction(content, project_id, model_id))
+  print(get_prediction(content, project_id, model_id))
