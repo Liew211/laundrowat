@@ -1,0 +1,77 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+
+<div class="page-header">
+  <h1>Laundro<em>WAT</em></h1>
+</div>
+<div>
+  <p class="intro">LaundroWAT aims to simplify the laundry experience by providing easier access and quick detection of
+    common laundry symbols</p>
+</div>
+<div class="intro2">
+  <h2>Try out our tool below!</h2>
+  <p>The following tool currently only works with picture uploads of stable, clear images. Further features will be
+    added soon!</p>
+</div>
+
+
+<!-- <body>
+  <div class="container">
+    <video autoplay="true" id="videoElement">
+
+    </video>
+  </div>
+  <script>
+  var video = document.querySelector("#videoElement");
+  if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function (stream) {
+      video.srcObject = stream;
+    })
+    .catch(function (err0r) {
+      console.log("Something went wrong!");
+    });
+  }
+  </script>
+</body> -->
+<video id="video" width="640" height="480" autoplay></video>
+<form action="snap"><button class="snap">Snap Photo</button></form>
+<div class="margin-tb"><h3>{{ symbol }}</h3></div>
+
+<br>
+<script>
+  var video = document.getElementById('video');
+
+  if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    // Not adding `{ audio: true }` since we only want video now
+    navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
+      //video.src = window.URL.createObjectURL(stream);
+      video.srcObject = stream;
+      video.play();
+    });
+  }
+
+// var canvas = document.getElementById('canvas');
+// var context = canvas.getContext('2d');
+// var video = document.getElementById('video'); 
+
+
+
+// // Trigger photo take
+// document.getElementById("snap").addEventListener("click", function() {
+//   context.drawImage(video, 0, 0, 640, 480);
+// });
+
+</script>
+
+
+
+
+
+{% if snapped %}
+<img src="../../static/simplecv.png" width="640" height="480" />
+{% endif %}
+
+{% endblock %}

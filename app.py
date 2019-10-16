@@ -8,6 +8,7 @@ import logging
 from logging import Formatter, FileHandler
 import os
 from camera import video
+from predictions import make_prediction
 
 #----------------------------------------------------------------------------#
 # App Config.
@@ -19,13 +20,17 @@ app.config.from_object('config')
 
 @app.route('/')
 def home():
-    video()
-    return render_template('pages/placeholder.home.html')
+    return render_template('pages/home.html', symbol="", snapped=False)
 
+@app.route('/snap')
+def snap():
+    file_path = video()
+    symbol = make_prediction(file_path)
+    return render_template('pages/home.html', symbol=symbol, snapped=True)
 
 @app.route('/about')
 def about():
-    return render_template('pages/placeholder.about.html')
+    return render_template('pages/about.html')
 
 # Error handlers.
 

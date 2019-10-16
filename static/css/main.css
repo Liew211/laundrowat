@@ -3,6 +3,13 @@
  * @file
  * Main stylesheet file.
  */
+
+body {
+  background-color: #ECEFF4 !important;
+  color: #2E3440 !important;
+  font-family: 'Manrope';
+  font-size: 14px;
+}
 /*****************************************************************************
  * Main elements
  ****************************************************************************/
@@ -10,7 +17,7 @@ html {
   overflow-y: auto;
 }
 h1{
-  color:darkblue;
+  color: var(--nord6);
   font-family: 'Segoe UI';
 }
 h2{
@@ -38,5 +45,24 @@ a {
 /*****************************************************************************
  * Various other styles
  ****************************************************************************/
+.margin-tb {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
 
-/* Various other styles end */
+.snap {
+  border-radius: 8px;
+  padding: 12px 28px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  background-color: #3B4252;
+  color: #ECEFF4;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.snap:hover {
+  background-color: #4C566A;
+}
+
+

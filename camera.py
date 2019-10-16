@@ -10,3 +10,4 @@ def video():
     # Close device
     video_capture.release()
     cv2.imwrite("static/simplecv.png", frame)
+    return "static/simplecv.png"
