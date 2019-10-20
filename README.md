@@ -9,20 +9,7 @@ $ cd laundrowat
 $ pip install virtualenv
 $ virtualenv env
 $ source venv/bin/activate
-```
-
-On Windows/Linux:
-```bash
 $ pip install -r requirements.txt
-```
-
-On macOS:
-```bash
-$ pip3 install -r requirements.txt
-```
-
-Finally:
-```bash
 $ flask run 
 ```
 The Flask app runs on port 5000 by default, so go to [](localhost:5000/)
