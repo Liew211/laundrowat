@@ -12,4 +12,4 @@ $ source venv/bin/activate
 $ pip install -r requirements.txt
 $ flask run 
 ```
-The Flask app runs on port 5000 by default, so go to [http://localhost:5000/](http://localhost:5000/)
+The Flask app runs on port 5000 by default, so go to http://localhost:5000/
