@@ -55,7 +55,9 @@ def make_prediction(file_path):
   return response
 
 # Test case
-# make_prediction('static/simplecv.png')
-file_paths = ['sample2/sample2-3.png', 'sample2/sample2-4.png']
+# make_prediction(file path)
+file_paths = sys.argv[1:]
 for file in file_paths:
+  file = 'sample/' + file
+  print(file)
   print(make_prediction(file))
