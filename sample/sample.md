@@ -1,6 +1,6 @@
 This folder contains sample images of laundry symbols, that we took from the T-shirts we had on hand.  We used these images as test cases when implementing the API.
 
-To test these yourself, enter the virtualenv and run `python predictions.py [image name in sample folder]`, i.e. `python predictions.py sample1-1.jpg`.
+To test these yourself, enter the virtualenv and run `python predictions.py [image name in sample folder]`, i.e. `python predictions.py sample1-1.jpg` (remember to use `python3` instead of `python` on macOS).
 
 You can test multiple images at once by separating the image names with a space:
 `python predictions.py sample1-1.jpg sample 1-2.png sample1-3.png`.
